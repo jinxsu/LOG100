@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+
 public class Main {
     public static void main (String[] args) {
         //Question 1
@@ -32,13 +33,18 @@ public class Main {
 
         switch (data)
         {
-            case 1: elemenCount ( tab3 );
+            case 1:
+                System.out.println ( elemenCount ( tab3 ));
                 break;
-            case 2: average ( tab3 );
+            case 2:
+                System.out.println (average ( tab3 ));
                 break;
-            case 3: maxValue ( tab3 );
+            case 3:
+                System.out.println (maxValue ( tab3 ));
                 break;
-            case 4: minValue ( tab3 );
+            case 4:
+                System.out.println (minValue ( tab3 ));
+
                 break;
             default:
                 System.out.println ("Invalid value" );
