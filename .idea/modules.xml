@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Laboratoire 1.iml" filepath="$PROJECT_DIR$/Laboratoire 1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/LOG100.iml" filepath="$PROJECT_DIR$/.idea/LOG100.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Laboratoire 1/Laboratoire 1.iml" filepath="$PROJECT_DIR$/Laboratoire 1/Laboratoire 1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Laboratoire 2/Laboratoire 2.iml" filepath="$PROJECT_DIR$/Laboratoire 2/Laboratoire 2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Laboratoire 3/Laboratoire 3.iml" filepath="$PROJECT_DIR$/Laboratoire 3/Laboratoire 3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Laboratoire 4/Laboratoire 4.iml" filepath="$PROJECT_DIR$/Laboratoire 4/Laboratoire 4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Laboratoire 5/Laboratoire 5.iml" filepath="$PROJECT_DIR$/Laboratoire 5/Laboratoire 5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Laboratoire 6/Laboratoire 6.iml" filepath="$PROJECT_DIR$/Laboratoire 6/Laboratoire 6.iml" />
     </modules>
   </component>
 </project>
