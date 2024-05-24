@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aab287c2-c7ce-449c-8dfd-88d1cb192480" name="Changes" comment="fix">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="aab287c2-c7ce-449c-8dfd-88d1cb192480" name="Changes" comment="complete the first lab">
       <change beforePath="$PROJECT_DIR$/Laboratoire 1/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratoire 1/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +59,7 @@
       <workItem from="1715803963599" duration="426000" />
       <workItem from="1715804443541" duration="682000" />
       <workItem from="1716065227775" duration="2009000" />
-      <workItem from="1716570426345" duration="1079000" />
+      <workItem from="1716570426345" duration="1141000" />
     </task>
     <task id="LOCAL-00001" summary="fix">
       <option name="closed" value="true" />
@@ -70,7 +69,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715804521994</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="complete the first lab">
+      <option name="closed" value="true" />
+      <created>1716571548657</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1716571548657</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -78,6 +85,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix" />
+    <MESSAGE value="complete the first lab" />
+    <option name="LAST_COMMIT_MESSAGE" value="complete the first lab" />
   </component>
 </project>
