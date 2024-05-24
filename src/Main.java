@@ -22,38 +22,48 @@ public class Main {
         printMat ( multiply ( tab3,tab4 ) );
 
         //Question 3
-        Scanner sc = new Scanner (System.in);
         System.out.println ( "Enter the operation you want to perform: " );
         System.out.println (" 1- Element Count" );
         System.out.println (" 2- Average" );
         System.out.println (" 3- Max value" );
         System.out.println (" 4- Min value" );
 
-        int data= sc.nextInt ( );
+        if (args.length < 2) {
+            System.out.println("Invalid operation " + (args.length > 0 ? args[0] : ""));
+            return;
+        }
 
-        switch (data)
-        {
+        int operation;
+        try {
+            operation = Integer.parseInt(args[0]);
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid operation " + args[0]);
+            return;
+        }
+        double[] values = new double[args.length - 1];
+        for (int i = 1; i < args.length; i++) {
+            values[i - 1] = Double.parseDouble(args[i]);
+        }
+
+        switch (operation) {
             case 1:
-                System.out.println ( elemenCount ( tab3 ));
+                System.out.println("Element Count: " + elemenCount(values));
                 break;
             case 2:
-                System.out.println (average ( tab3 ));
+                System.out.println("Average: " + average(values));
                 break;
             case 3:
-                System.out.println (maxValue ( tab3 ));
-                break;
-            case 4:
-                System.out.println (minValue ( tab3 ));
 
+                System.out.println("Max: " + maxValue ( values )+ " Min: " + minValue ( values ) );
                 break;
             default:
-                System.out.println ("Invalid value" );
+                System.out.println("Invalid operation " + operation);
                 break;
+        }
         }
 
 
 
-    }
     public static int sum(int[] a, int[] b){
         int value1=0;
         int value2=0;
@@ -67,20 +77,28 @@ public class Main {
         }
         return value1+value2;
     }
-    public static double[][] multiply(double[][] matA, double[][] matB)
-    {
-        int rows=Math.min (matA.length, matB.length);
-        int columns=Math.min (matA[0].length, matB[0].length);
+    public static double[][] multiply(double[][] matA, double[][] matB) {
+        int rows = matA.length;
+        int columns = matB[0].length;
 
-        double [][] answer = new double[rows][columns];
-        for ( int i = 0; i < rows; i++ ) {
-            for ( int j = 0; j < columns; j++ ) {
+        double[][] answer;
+        if (rows == matB[0].length) {
+            answer = new double[rows][columns];
+            for ( int i = 0; i < rows; i++ ) {
+                double total = 0;
+                for ( int j = 0; j < columns; j++ ) {
+                    for ( int k = 0; k < matA[0].length; k++ ) {
+                        total += matA[i][k] * matB[k][j];
+                    }
+                    answer[i][j] = total;
 
-                answer[i][j] += matA[i][j] * matB[i][j];
 
+                }
             }
-        }
 
+        } else {
+            answer = new double[][]{{Double.NaN}};
+        }
         return answer;
 
     }
@@ -94,50 +112,48 @@ public class Main {
         }
     }
 
-    public static int elemenCount (double[][] tab) {
+    public static int elemenCount (double[] tab) {
         int count=0;
-        for (double[] row : tab) {
-            for (double val : row) {
+
+            for (double val : tab) {
                 count += 1;
             }
-        }
-        return count;
+
+        return count-1;
     }
-    public static  double average(double[][] tab)
+    public static  double average(double[] tab)
     {
 
         double average=0;
-        for (double[] row : tab) {
-            average += row[0];
-            for (double val : row) {
+            for (double val : tab) {
                 average += val;
             }
-        }
+
         return average / elemenCount(tab);
     }
-    public static double maxValue(double[][] tab)
+    public static double maxValue(double[] tab)
     {
-        double max=-100000;
-        for (double[] row : tab) {
-            for (double val : row) {
+        double max=Float.NEGATIVE_INFINITY;
+
+            for (double val : tab) {
                 if (val > max) {
                     max = val;
                 }
 
             }
-        }
+
         return max;
     }
-    public static double minValue(double[][] tab)
+    public static double minValue(double[] tab)
     {
-        double min=-100000;
-        for (double[] row : tab) {
-            for (double val : row) {
+        double min=Float.MAX_VALUE;
+
+            for (double val : tab) {
                 if (val < min) {
                     min = val;
                 }
             }
-        }
+
         return min;
     }
 }
