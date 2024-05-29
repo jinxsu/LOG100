@@ -72,7 +72,6 @@ public class Grade {
         else if( percent>=50 && percent<57)
         {
             letter='D';
-
         }
         else{
             letter='E';
@@ -80,7 +79,7 @@ public class Grade {
         return letter;
 
     }
-    private float convertLetterToPercent( char letter)
+    private float convertLetterToPercent( char letter) // peut se faire avec un switch case aussi
     {
         float percent;
 

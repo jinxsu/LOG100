@@ -1,6 +1,4 @@
 public class Transcript {
-    float mean=0F;
-    StringBuilder reportCard = new StringBuilder();
 
     public static String getReport(Grade[] grades)
     {

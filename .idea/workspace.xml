@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aab287c2-c7ce-449c-8dfd-88d1cb192480" name="Changes" comment="complete the first lab">
-      <change afterPath="$PROJECT_DIR$/Laboratoire 2/src/Grade.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Laboratoire 2/src/Transcript.java" afterDir="false" />
+    <list default="true" id="aab287c2-c7ce-449c-8dfd-88d1cb192480" name="Changes" comment="complete the second lab">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laboratoire 2/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratoire 2/src/Grade.java" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratoire 2/src/Grade.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +69,7 @@
       <workItem from="1715803963599" duration="426000" />
       <workItem from="1715804443541" duration="682000" />
       <workItem from="1716065227775" duration="2009000" />
-      <workItem from="1716570426345" duration="7826000" />
+      <workItem from="1716570426345" duration="12950000" />
     </task>
     <task id="LOCAL-00001" summary="fix">
       <option name="closed" value="true" />
@@ -97,7 +95,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716571584364</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="complete the second lab">
+      <option name="closed" value="true" />
+      <created>1716580724604</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1716580724604</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -106,6 +112,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix" />
     <MESSAGE value="complete the first lab" />
-    <option name="LAST_COMMIT_MESSAGE" value="complete the first lab" />
+    <MESSAGE value="complete the second lab" />
+    <option name="LAST_COMMIT_MESSAGE" value="complete the second lab" />
   </component>
 </project>
