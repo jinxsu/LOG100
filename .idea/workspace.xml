@@ -5,8 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aab287c2-c7ce-449c-8dfd-88d1cb192480" name="Changes" comment="complete the second lab">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Laboratoire 3/src/Driver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Laboratoire 3/src/dt/Suv.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Laboratoire 3/src/dt/Truck.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Laboratoire 3/src/dt/TruckException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Laboratoire 3/src/dt/Vehicle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Laboratoire 3/src/dt/VehicleException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratoire 1/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratoire 1/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Laboratoire 2/src/Grade.java" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratoire 2/src/Grade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratoire 2/src/Transcript.java" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratoire 2/src/Transcript.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratoire 3/src/Main.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +35,20 @@
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;jinxsu&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="7b645db6-c768-4eba-8222-63e5570b90ec" />
+        <option name="url" value="https://github.com/jinxsu/LOG100.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -35,8 +59,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Driver.executor": "Run",
     "Application.Grade.executor": "Run",
+    "Application.Suv.executor": "Run",
     "Application.Transcript.executor": "Run",
+    "Application.Truck.executor": "Run",
+    "Application.Vehicle.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -48,6 +76,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -70,6 +99,10 @@
       <workItem from="1715804443541" duration="682000" />
       <workItem from="1716065227775" duration="2009000" />
       <workItem from="1716570426345" duration="12950000" />
+      <workItem from="1716989869078" duration="513000" />
+      <workItem from="1716996009574" duration="1500000" />
+      <workItem from="1717176041275" duration="17526000" />
+      <workItem from="1717334648562" duration="13059000" />
     </task>
     <task id="LOCAL-00001" summary="fix">
       <option name="closed" value="true" />
@@ -103,7 +136,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716580724604</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="complete the second lab">
+      <option name="closed" value="true" />
+      <created>1716990057201</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1716990057201</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

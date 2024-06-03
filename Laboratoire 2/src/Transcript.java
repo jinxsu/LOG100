@@ -1,5 +1,9 @@
 public class Transcript {
-
+    /**
+     *
+     * @param grades
+     * @return
+     */
     public static String getReport(Grade[] grades)
     {
         StringBuilder reportCard = new StringBuilder();
@@ -15,6 +19,12 @@ public class Transcript {
         return reportCard.toString();
     }
 
+    /**
+     *
+     * @param grades
+     * @param department
+     * @return
+     */
     public static String getReport(Grade[] grades, String department)
     {
         StringBuilder reportCard = new StringBuilder();
@@ -31,7 +41,6 @@ public class Transcript {
 
 
             }
-
 
         }
         reportCard.append("Mean: ").append(mean/count);

@@ -10,11 +10,23 @@ public class Grade {
         instanceCount++;
     }
 
+    /**
+     *
+     * @param dept
+     * @param courseNum
+     */
     public Grade(String dept, int courseNum) {
         this.department=dept;
         this.courseNum=courseNum;
         instanceCount++;
     }
+
+    /**
+     *
+     * @param dept
+     * @param courseNum
+     * @param percent
+     */
     public Grade(String dept, int courseNum, float percent) {
         this.department=dept;
         this.courseNum=courseNum;
@@ -22,6 +34,13 @@ public class Grade {
         this. letter= convertPercentageToLetter(percent);
         instanceCount++;
     }
+
+    /**
+     *
+     * @param dept
+     * @param courseNum
+     * @param letter
+     */
     public Grade(String dept, int courseNum, char letter) {
         this.department=dept;
         this.courseNum=courseNum;
@@ -53,6 +72,11 @@ public class Grade {
         return instanceCount;
     }
 
+    /**
+     *
+     * @param percent
+     * @return
+     */
     private char convertPercentageToLetter( float percent)
     {
         char letter;
@@ -79,7 +103,13 @@ public class Grade {
         return letter;
 
     }
-    private float convertLetterToPercent( char letter) // peut se faire avec un switch case aussi
+
+    /**
+     *
+     * @param letter
+     * @return
+     */
+    private float convertLetterToPercent( char letter)
     {
         float percent;
 
@@ -104,11 +134,26 @@ public class Grade {
             percent=(float)(0+50)/2;
 
         }
+        // peut se faire avec un switch case aussi
+        /*
+        percent = switch (letter) {
+            case 'A' -> ( float ) ( 75 + 100 ) / 2;
+            case 'B' -> ( float ) ( 66 + 75 ) / 2;
+            case 'C' -> ( float ) ( 57 + 66 ) / 2;
+            case 'D' -> ( float ) ( 50 + 57 ) / 2;
+            default -> ( float ) ( 0 + 50 ) / 2;
+        };
+
+         */
+
         return percent;
 
     }
 
-
+    /**
+     *
+     * @return
+     */
     public String convertToString(){
         return ( getDepartment ()+getCourseNum()+" "+getLetter()+" "+getPercent());
     }
