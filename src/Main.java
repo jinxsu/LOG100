@@ -61,7 +61,12 @@ public class Main {
         }
         }
 
-
+    /**
+     *
+     * @param a
+     * @param b
+     * @return
+     */
 
     public static int sum(int[] a, int[] b){
         int value1=0;
@@ -76,6 +81,13 @@ public class Main {
         }
         return value1+value2;
     }
+
+    /**
+     *
+     * @param matA
+     * @param matB
+     * @return
+     */
     public static double[][] multiply(double[][] matA, double[][] matB) {
         int rows = matA.length;
         int columns = matB[0].length;
@@ -101,6 +113,11 @@ public class Main {
         return answer;
 
     }
+
+    /**
+     *
+     * @param mat
+     */
     public static void printMat(double[][] mat) {
         for (double[] row : mat) {
             System.out.print("[ ");
@@ -111,6 +128,11 @@ public class Main {
         }
     }
 
+    /**
+     *
+     * @param tab
+     * @return
+     */
     public static int elemenCount (double[] tab) {
         int count=0;
 
@@ -120,6 +142,12 @@ public class Main {
 
         return count-1;
     }
+
+    /**
+     *  Il cherche la moyenne des valeurs du tableau et pour obtenir la quantite d'element, on utilise la fonction elemenCount()
+     * @param tab tableu dans lequel on veut obtenir la moyenne
+     * @return la moyenne
+     */
     public static  double average(double[] tab)
     {
 
@@ -130,6 +158,12 @@ public class Main {
 
         return average / elemenCount(tab);
     }
+
+    /**
+     *
+     * @param tab tableau dans lequel on cherche la valeur maximale
+     * @return la valeur maximale du tableau
+     */
     public static double maxValue(double[] tab)
     {
         double max=Float.NEGATIVE_INFINITY;
@@ -143,6 +177,12 @@ public class Main {
 
         return max;
     }
+
+    /**
+     * Trouve la valeur minimum du tableau et la retourne
+     * @param tab tableau dans lequel on cherche la valeur minimale
+     * @return la valeur min du tableau
+     */
     public static double minValue(double[] tab)
     {
         double min=Float.MAX_VALUE;
