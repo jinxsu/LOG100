@@ -4,19 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aab287c2-c7ce-449c-8dfd-88d1cb192480" name="Changes" comment="complete the second lab">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Laboratoire 3/src/Driver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Laboratoire 3/src/dt/Suv.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Laboratoire 3/src/dt/Truck.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Laboratoire 3/src/dt/TruckException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Laboratoire 3/src/dt/Vehicle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Laboratoire 3/src/dt/VehicleException.java" afterDir="false" />
+    <list default="true" id="aab287c2-c7ce-449c-8dfd-88d1cb192480" name="Changes" comment="complete the third lab">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Laboratoire 4/src/LLPolynomial.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Laboratoire 4/src/Polynomial.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Laboratoire 4/src/PolynominalToolbox.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Laboratoire 4/src/Term.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Laboratoire 4/src/TermComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Laboratoire 4/src/VectorPolynomial.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Laboratoire 4/src/ZeroCoefficientException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laboratoire 1/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratoire 1/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laboratoire 2/src/Grade.java" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratoire 2/src/Grade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laboratoire 2/src/Transcript.java" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratoire 2/src/Transcript.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laboratoire 3/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratoire 4/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratoire 4/src/Driver.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,29 +55,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Driver.executor": "Run",
-    "Application.Grade.executor": "Run",
-    "Application.Suv.executor": "Run",
-    "Application.Transcript.executor": "Run",
-    "Application.Truck.executor": "Run",
-    "Application.Vehicle.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "jdk.selected.JAVA_MODULE": "18",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Driver.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Grade.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Suv.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Transcript.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Truck.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Vehicle.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;18&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -102,7 +100,8 @@
       <workItem from="1716989869078" duration="513000" />
       <workItem from="1716996009574" duration="1500000" />
       <workItem from="1717176041275" duration="17526000" />
-      <workItem from="1717334648562" duration="13059000" />
+      <workItem from="1717334648562" duration="13732000" />
+      <workItem from="1717784313323" duration="22691000" />
     </task>
     <task id="LOCAL-00001" summary="fix">
       <option name="closed" value="true" />
@@ -144,7 +143,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716990057201</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="complete the third lab">
+      <option name="closed" value="true" />
+      <created>1717383763314</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1717383763314</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,6 +161,8 @@
     <MESSAGE value="fix" />
     <MESSAGE value="complete the first lab" />
     <MESSAGE value="complete the second lab" />
-    <option name="LAST_COMMIT_MESSAGE" value="complete the second lab" />
+    <MESSAGE value="complete the second lab&#10;complete the first lab" />
+    <MESSAGE value="complete the third lab" />
+    <option name="LAST_COMMIT_MESSAGE" value="complete the third lab" />
   </component>
 </project>
