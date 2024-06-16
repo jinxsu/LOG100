@@ -4,17 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aab287c2-c7ce-449c-8dfd-88d1cb192480" name="Changes" comment="complete the third lab">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Laboratoire 4/src/LLPolynomial.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Laboratoire 4/src/Polynomial.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Laboratoire 4/src/PolynominalToolbox.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Laboratoire 4/src/Term.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Laboratoire 4/src/TermComparator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Laboratoire 4/src/VectorPolynomial.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Laboratoire 4/src/ZeroCoefficientException.java" afterDir="false" />
+    <list default="true" id="aab287c2-c7ce-449c-8dfd-88d1cb192480" name="Changes" comment="complete the fourth lab">
+      <change afterPath="$PROJECT_DIR$/Laboratoire 5/src/Airport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Laboratoire 5/src/AirportScreen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Laboratoire 5/src/Flight.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Laboratoire 5/src/Gate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Laboratoire 5/src/GateScreen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Laboratoire 5/src/Observer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Laboratoire 5/src/Subject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Laboratoire 5/src/Terminal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Laboratoire 5/src/TerminalScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laboratoire 4/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratoire 4/src/Driver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratoire 5/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratoire 5/src/ConsoleApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +48,9 @@
       </UrlAndAccount>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -74,10 +78,15 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\GitHub\LOG100\Laboratoire 5\src" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -101,7 +110,11 @@
       <workItem from="1716996009574" duration="1500000" />
       <workItem from="1717176041275" duration="17526000" />
       <workItem from="1717334648562" duration="13732000" />
-      <workItem from="1717784313323" duration="22691000" />
+      <workItem from="1717784313323" duration="23808000" />
+      <workItem from="1718166137727" duration="556000" />
+      <workItem from="1718198047194" duration="1422000" />
+      <workItem from="1718390487637" duration="16006000" />
+      <workItem from="1718475348178" duration="12199000" />
     </task>
     <task id="LOCAL-00001" summary="fix">
       <option name="closed" value="true" />
@@ -151,11 +164,30 @@
       <option name="project" value="LOCAL" />
       <updated>1717383763314</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="complete the fourth lab">
+      <option name="closed" value="true" />
+      <created>1717810245300</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1717810245301</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix" />
@@ -163,6 +195,7 @@
     <MESSAGE value="complete the second lab" />
     <MESSAGE value="complete the second lab&#10;complete the first lab" />
     <MESSAGE value="complete the third lab" />
-    <option name="LAST_COMMIT_MESSAGE" value="complete the third lab" />
+    <MESSAGE value="complete the fourth lab" />
+    <option name="LAST_COMMIT_MESSAGE" value="complete the fourth lab" />
   </component>
 </project>
