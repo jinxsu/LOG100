@@ -160,72 +160,19 @@ public class ConsoleApp {
             }
         }
         airport.notifyObservers ();
-        if(gate.charAt ( 0)=='A')
-        {
-            termA.notifyObservers ();
-        }
-        else if(gate.charAt ( 0)=='B')
-        {
-            termB.notifyObservers ();
-        }
-        else{
-            termC.notifyObservers ();
-        }
-        String[] arr = gate.split("-");
-        if(arr[0].equals ("A"))
-        {
-            if(arr[1].equals ("1"))
-            {
-                gatesA[0].notifyObservers ();
-            }
-            else if(arr[1].equals ("2"))
-            {
-                gatesA[1].notifyObservers ();
-            }
-            else{
-                gatesA[2].notifyObservers ();
-            }
-        }
-        else if(arr[0].equals ("B"))
-        {
-            if(arr[1].equals ("1"))
-            {
-                gatesB[0].notifyObservers ();
-            }
-            else if(arr[1].equals ("2"))
-            {
-                gatesB[1].notifyObservers ();
-            }
-            else{
-                gatesB[2].notifyObservers ();
-            }
-
-        }
-        else{
-            if(arr[1].equals ("1"))
-            {
-                gatesC[0].notifyObservers ();
-            }
-            else if(arr[1].equals ("2"))
-            {
-                gatesC[1].notifyObservers ();
-            }
-            else{
-                gatesC[2].notifyObservers ();
-            }
-        }
+        notifyObserversByGate ( gate );
 
 
     }
     public boolean isGateAvailable(String gate)
     {
         for(Flight flight : airport.getFlights()) {
-            if(flight.getGate ().equals (gate)) {
-                return false;
+            if(!flight.getGate ().equals (gate)) {
+                return true;
             }
 
         }
-        return true;
+        return false;
     }
     private void notifyObserversByGate(String gate) {
         String[] parts = gate.split("-");
@@ -259,14 +206,13 @@ public class ConsoleApp {
         String terminal = scan.next().toUpperCase (  );
 
         System.out.print("Gate Number: ");
-        String gateNumber = scan.next();
+        int gateNumber = scan.nextInt();
 
         for(Flight flight : airport.getFlights()) {
             if(flight.getCompany ().equals ( company )&& flight.getFlightNumber ()==flightNumber )
             {
                 flightToChangeGate = flight;
                 break;
-
 
             }
         }
@@ -276,17 +222,55 @@ public class ConsoleApp {
         if(isGateAvailable(newGate)) {
             flightToChangeGate.setGate ( newGate );
             airport.notifyObservers();
-            notifyObserversByGate(newGate);
-            notifyObserversByGate ( oldGate );
+            AddToNewGate ( flightToChangeGate,terminal,gateNumber );
+            if(airport.getFlights ().contains (flightToChangeGate)) {
+                removeFlightFromCurrentLocation ( flightToChangeGate );
+            }
+
+
 
         }
         else{
-            System.out.println("New gate " + gateNumber + " is not available.");
+            System.out.println("New gate " + newGate + " is not available.");
         }
 
+    }
+    private void removeFlightFromCurrentLocation(Flight flight)
+    {
+        String[] arr = flight.getGate ().split("-");
+        int gateNumber= Integer.parseInt ( arr[1] );
+        switch (arr[0])
+        {
+            case "A":
+                termA.removeFlight ( flight );
+                gatesA[gateNumber - 1].removeFlight ( flight );
 
-
-
+                break;
+            case "B":
+                termB.removeFlight ( flight );
+                gatesB[gateNumber - 1].removeFlight ( flight );
+                break;
+            case "C":
+                termC.removeFlight ( flight );
+                gatesC[gateNumber - 1].removeFlight ( flight );
+        }
+    }
+    private void AddToNewGate(Flight flight , String terminal, int gate)
+    {
+        switch(terminal)
+        {
+            case "A":
+                termA.addFlight ( flight );
+               gatesA[gate-1].addFlight ( flight );
+                break;
+                case "B":
+                    termB.addFlight ( flight );
+                    gatesB[gate-1].addFlight ( flight );
+                    break;
+                    case "C":
+                        termC.addFlight ( flight );
+                        gatesC[gate-1].addFlight ( flight );
+        }
     }
     public void cancelFlight() {
         String gate=" ";
@@ -304,60 +288,8 @@ public class ConsoleApp {
             }
         }
         airport.notifyObservers ();
-        if(gate.charAt ( 0)=='A')
-        {
-            termA.notifyObservers ();
-        }
-        else if(gate.charAt ( 0)=='B')
-        {
-            termB.notifyObservers ();
-        }
-        else{
-            termC.notifyObservers ();
-        }
-        String[] arr = gate.split("-");
-        if(arr[0].equals ("A"))
-        {
-            if(arr[1].equals ("1"))
-            {
-                gatesA[0].notifyObservers ();
-            }
-            else if(arr[1].equals ("2"))
-            {
-                gatesA[1].notifyObservers ();
-            }
-            else{
-                gatesA[2].notifyObservers ();
-            }
-        }
-        else if(arr[0].equals ("B"))
-        {
-            if(arr[1].equals ("1"))
-            {
-                gatesB[0].notifyObservers ();
-            }
-            else if(arr[1].equals ("2"))
-            {
-                gatesB[1].notifyObservers ();
-            }
-            else{
-                gatesB[2].notifyObservers ();
-            }
+        notifyObserversByGate ( gate );
 
-        }
-        else{
-            if(arr[1].equals ("1"))
-            {
-                gatesC[0].notifyObservers ();
-            }
-            else if(arr[1].equals ("2"))
-            {
-                gatesC[1].notifyObservers ();
-            }
-            else{
-                gatesC[2].notifyObservers ();
-            }
-        }
     }
     public void notifyBoarding() {
         String gate=" ";
@@ -375,64 +307,12 @@ public class ConsoleApp {
             }
         }
         airport.notifyObservers ();
-        if(gate.charAt (0)=='A')
-        {
-            termA.notifyObservers ();
-        }
-        else if(gate.charAt (0)=='B')
-        {
-            termB.notifyObservers ();
-        }
-        else{
-            termC.notifyObservers ();
-        }
-        String[] arr = gate.split("-");
-        if(arr[0].equals ("A"))
-        {
-            if(arr[1].equals ("1"))
-            {
-                gatesA[0].notifyObservers ();
-            }
-            else if(arr[1].equals ("2"))
-            {
-                gatesA[1].notifyObservers ();
-            }
-            else{
-                gatesA[2].notifyObservers ();
-            }
-        }
-        else if(arr[0].equals ("B"))
-        {
-            if(arr[1].equals ("1"))
-            {
-                gatesB[0].notifyObservers ();
-            }
-            else if(arr[1].equals ("2"))
-            {
-                gatesB[1].notifyObservers ();
-            }
-            else{
-                gatesB[2].notifyObservers ();
-            }
+        notifyObserversByGate ( gate );
 
-        }
-        else{
-            if(arr[1].equals ("1"))
-            {
-                gatesC[0].notifyObservers ();
-            }
-            else if(arr[1].equals ("2"))
-            {
-                gatesC[1].notifyObservers ();
-            }
-            else{
-                gatesC[2].notifyObservers ();
-            }
-        }
 
     }
     public void removeFlight() {
-        String gate=" ";
+        Flight flightToRemove = null;
         System.out.print("Company: ");
         String company = scan.next();
         System.out.print("Flight Number: ");
@@ -440,65 +320,14 @@ public class ConsoleApp {
         for(Flight flight : airport.getFlights()) {
             if(flight.getCompany().equals ( company )&& flight.getFlightNumber() == flightNumber )
             {
+                flightToRemove = flight;
                 airport.removeFlight(flight);
-                gate= flight.getGate ();
+
             }
 
         }
-        if(gate.charAt (0)=='A')
-        {
-            termA.notifyObservers ();
-        }
-        else if(gate.charAt (0)=='B')
-        {
-            termB.notifyObservers ();
-        }
-        else{
-            termC.notifyObservers ();
-        }
-        String[] arr = gate.split("-");
-        if(arr[0].equals ("A"))
-        {
-            if(arr[1].equals ("1"))
-            {
-                gatesA[0].notifyObservers ();
-            }
-            else if(arr[1].equals ("2"))
-            {
-                gatesA[1].notifyObservers ();
-            }
-            else{
-                gatesA[2].notifyObservers ();
-            }
-        }
-        else if(arr[0].equals ("B"))
-        {
-            if(arr[1].equals ("1"))
-            {
-                gatesB[0].notifyObservers ();
-            }
-            else if(arr[1].equals ("2"))
-            {
-                gatesB[1].notifyObservers ();
-            }
-            else{
-                gatesB[2].notifyObservers ();
-            }
-
-        }
-        else{
-            if(arr[1].equals ("1"))
-            {
-                gatesC[0].notifyObservers ();
-            }
-            else if(arr[1].equals ("2"))
-            {
-                gatesC[1].notifyObservers ();
-            }
-            else{
-                gatesC[2].notifyObservers ();
-            }
-        }
+        assert flightToRemove != null;
+        removeFlightFromCurrentLocation ( flightToRemove );
 
     }
 

@@ -18,6 +18,7 @@ public class Airport extends Subject{
         listOfFlights.remove(flight);
         notifyObservers ();
 
+
     }
 
     @Override

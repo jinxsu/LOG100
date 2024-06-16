@@ -5,17 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aab287c2-c7ce-449c-8dfd-88d1cb192480" name="Changes" comment="complete the fourth lab">
-      <change afterPath="$PROJECT_DIR$/Laboratoire 5/src/Airport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Laboratoire 5/src/AirportScreen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Laboratoire 5/src/Flight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Laboratoire 5/src/Gate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Laboratoire 5/src/GateScreen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Laboratoire 5/src/Observer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Laboratoire 5/src/Subject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Laboratoire 5/src/Terminal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Laboratoire 5/src/TerminalScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laboratoire 5/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratoire 5/src/ConsoleApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratoire 5/src/Airport.java" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratoire 5/src/Airport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratoire 5/src/ConsoleApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratoire 5/src/ConsoleApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,29 +51,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Driver.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Grade.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Suv.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Transcript.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Truck.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Vehicle.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;18&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ConsoleApp.executor": "Run",
+    "Application.Driver.executor": "Run",
+    "Application.Grade.executor": "Run",
+    "Application.Suv.executor": "Run",
+    "Application.Transcript.executor": "Run",
+    "Application.Truck.executor": "Run",
+    "Application.Vehicle.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "jdk.selected.JAVA_MODULE": "18",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\GitHub\LOG100\Laboratoire 5\src" />
@@ -114,7 +107,9 @@
       <workItem from="1718166137727" duration="556000" />
       <workItem from="1718198047194" duration="1422000" />
       <workItem from="1718390487637" duration="16006000" />
-      <workItem from="1718475348178" duration="12199000" />
+      <workItem from="1718475348178" duration="14510000" />
+      <workItem from="1718552247890" duration="1167000" />
+      <workItem from="1718553735846" duration="8272000" />
     </task>
     <task id="LOCAL-00001" summary="fix">
       <option name="closed" value="true" />
