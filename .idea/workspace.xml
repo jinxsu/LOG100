@@ -4,10 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aab287c2-c7ce-449c-8dfd-88d1cb192480" name="Changes" comment="complete the fourth lab">
+    <list default="true" id="aab287c2-c7ce-449c-8dfd-88d1cb192480" name="Changes" comment="incomplete 5th lab">
+      <change afterPath="$PROJECT_DIR$/Laboratoire 6/.codio" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Laboratoire 6/debug.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Laboratoire 6/doc/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Laboratoire 6/run.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Laboratoire 6/src/AddFlightDialog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Laboratoire 6/src/Airport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Laboratoire 6/src/AirportScreen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Laboratoire 6/src/CancelFlightDialog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Laboratoire 6/src/ChangeGateDialog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Laboratoire 6/src/ConsoleApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Laboratoire 6/src/DelayFlightDialog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Laboratoire 6/src/Flight.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Laboratoire 6/src/Gate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Laboratoire 6/src/GateScreen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Laboratoire 6/src/GuiApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Laboratoire 6/src/Observer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Laboratoire 6/src/ScreenDialog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Laboratoire 6/src/Subject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Laboratoire 6/src/Terminal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Laboratoire 6/src/TerminalScreen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Laboratoire 6/src/TestFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laboratoire 5/src/Airport.java" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratoire 5/src/Airport.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Laboratoire 5/src/ConsoleApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratoire 5/src/ConsoleApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratoire 6/src/Main.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +61,9 @@
       </UrlAndAccount>
     </option>
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -66,17 +90,25 @@
     "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "18",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/GitHub/LOG100/Laboratoire 6",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GitHub\LOG100\Laboratoire 6" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\GitHub\LOG100\Laboratoire 6\src" />
       <recent name="D:\GitHub\LOG100\Laboratoire 5\src" />
     </key>
   </component>
@@ -109,7 +141,8 @@
       <workItem from="1718390487637" duration="16006000" />
       <workItem from="1718475348178" duration="14510000" />
       <workItem from="1718552247890" duration="1167000" />
-      <workItem from="1718553735846" duration="8272000" />
+      <workItem from="1718553735846" duration="9538000" />
+      <workItem from="1718736489160" duration="347000" />
     </task>
     <task id="LOCAL-00001" summary="fix">
       <option name="closed" value="true" />
@@ -167,7 +200,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717810245301</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="incomplete 5th lab">
+      <option name="closed" value="true" />
+      <created>1718566655248</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1718566655248</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,6 +232,7 @@
     <MESSAGE value="complete the second lab&#10;complete the first lab" />
     <MESSAGE value="complete the third lab" />
     <MESSAGE value="complete the fourth lab" />
-    <option name="LAST_COMMIT_MESSAGE" value="complete the fourth lab" />
+    <MESSAGE value="incomplete 5th lab" />
+    <option name="LAST_COMMIT_MESSAGE" value="incomplete 5th lab" />
   </component>
 </project>
