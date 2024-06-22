@@ -1,5 +1,7 @@
 import java.awt.*;
 import java.awt.event.*;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
 import javax.swing.*;
 
 public class GuiApp extends JFrame {
@@ -44,12 +46,18 @@ public class GuiApp extends JFrame {
   private static final String addFlightText = "Add Flight";
   private static final String delayFlightText = "Delay Flight";
   private  static final String changeGateText="Change Gate";
-
+  private static final String notifyBoardingText="Notify Boarding";
+  private static final String cancelFlightText = "Cancel Flight";
+  private static final String removeFlightText = "Remove Flight";
   private static final String quitText = "Quit";
   // TODO: Add attributes for other operations
+  private static final String saveText = "Save";
+  private static final String loadText = "Load";
   
-  private JButton addButton, delayButton, changeGateButton, quitButton;
+  private JButton addButton, delayButton, changeGateButton, cancelFlightButton,notifyBoardingButton,removeFlightButton, quitButton;
   // TODO: Add attributes for other operations
+  private JButton saveButton;
+  private JButton loadButton;
   
   private JTextArea displayArea;
   private JScrollPane scrollPane;
@@ -182,6 +190,10 @@ public class GuiApp extends JFrame {
     addButton = new JButton(addFlightText);
     delayButton = new JButton(delayFlightText);
     changeGateButton =new JButton(changeGateText);
+    cancelFlightButton = new JButton(cancelFlightText);
+    notifyBoardingButton = new JButton(notifyBoardingText);
+    removeFlightButton = new JButton(removeFlightText);
+    saveButton = new JButton(saveText);
 
     quitButton = new JButton(quitText);
     // TODO: Add button instanciations for other operations
@@ -203,6 +215,10 @@ public class GuiApp extends JFrame {
     contentPane.add(addButton);
     contentPane.add(delayButton);
     contentPane.add(changeGateButton);
+    contentPane.add ( cancelFlightButton );
+    contentPane.add ( notifyBoardingButton );
+    contentPane.add ( removeFlightButton );
+    contentPane.add ( saveButton );
     // TODO: Add other buttons
     contentPane.add(quitButton);
     
@@ -225,8 +241,59 @@ public class GuiApp extends JFrame {
         displayArea.append("Delay Flight Option");
         System.out.println("Delay Flight Option");
         DelayFlightDialog delayFlightDialog=new DelayFlightDialog(GuiApp.this);
+        delayFlightDialog.setVisible(true);
       }
     });
+
+    changeGateButton.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+        displayArea.append("Change Gate Option");
+        System.out.println("Change Gate Option");
+        ChangeGateDialog changeGateDialog=new ChangeGateDialog(GuiApp.this);
+        changeGateDialog.setVisible(true);
+      }
+    });
+
+    cancelFlightButton.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+        displayArea.append("Cancel Flight Option");
+        System.out.println("Cancel Flight Option");
+        CancelFlightDialog cancelFlightDialog=new CancelFlightDialog(GuiApp.this);
+        cancelFlightDialog.setVisible(true);
+      }
+    });
+
+    notifyBoardingButton.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+        displayArea.append("Notify Boarding Option");
+        System.out.println("Notify Boarding Option");
+        NotifyBoardingDialog notifyBoardingDialog=new NotifyBoardingDialog(GuiApp.this);
+        notifyBoardingDialog.setVisible(true);
+      }
+    });
+
+    removeFlightButton.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+        displayArea.append("Remove Flight Option");
+        System.out.println("Remove Flight Option");
+        RemoveFlightDialog removeFlightDialog=new RemoveFlightDialog(GuiApp.this);
+        removeFlightDialog.setVisible(true);
+      }
+    });
+    saveButton.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+        displayArea.append("Save Option");
+        System.out.println("Save Option");
+        SaveDialog saveDialog=new SaveDialog(GuiApp.this);
+        saveDialog.setVisible(true);
+      }
+    });
+
     
     quitButton.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e) {
@@ -292,19 +359,220 @@ public class GuiApp extends JFrame {
   }
 
   public void addFlightToTerminal(Flight flight, String terminal) {
-    flight.setGate(terminal+" - "+flight.getGate());
-    airport.addFlight(flight.getCompany(), flight.getFlightNumber(), flight.getDestination(), flight.getDepartureTime(),flight.getGate() ,flight.getStatus());
+    switch (terminal) {
+      case "A":
+        termA.addFlight ( flight );
+        break;
+      case "B":
+        termB.addFlight ( flight );
+        break;
+      case "C":
+        termC.addFlight ( flight );
+        break;
+      default:
+        System.out.println("Terminal not available");
+        break;
+    }
   }
 
   public void addFlightToGate(Flight flight, String terminal, int gateNumber) {
-    flight.setGate(terminal+"-"+gateNumber);
-    airport.addFlight(flight.getCompany(), flight.getFlightNumber(), flight.getDestination(), flight.getDepartureTime(), flight.getGate(),flight.getStatus());
+    switch (terminal) {
+      case "A":
+        gatesA[gateNumber - 1].addFlight ( flight );
+        break;
+      case "B":
+        gatesB[gateNumber - 1].addFlight ( flight );
+        break;
+      case "C":
+        gatesC[gateNumber - 1].addFlight ( flight );
+        break;
+      default:
+        System.out.println("Gate not available");
+        break;
+    }
 
   }
 
   public void appendToDisplayArea(String s) {
 
-
+    displayArea.append(s + "\n");
 
   }
+
+  public void cancelFlight (String company, String flightNumber, String terminal, String gateNumber) {
+    for(Flight flight : airport.getFlights()) {
+      if(flight.getCompany().equals(company) && flight.getFlightNumber() == Integer.parseInt(flightNumber)) {
+        flight.setStatus ( "Cancelled" );
+        airport.notifyObservers();
+        switch (terminal) {
+          case "A":
+            termA.notifyObservers ( );
+            gatesA[Integer.parseInt ( gateNumber ) - 1].notifyObservers ( );
+            break;
+          case "B":
+            termB.notifyObservers ( );
+            gatesB[Integer.parseInt ( gateNumber ) - 1].notifyObservers ( );
+            break;
+          case "C":
+            termC.notifyObservers ( );
+            gatesC[Integer.parseInt ( gateNumber ) - 1].notifyObservers ( );
+            break;
+
+        }
+      }
+    }
+  }
+  public void changeGate(String company, String flightNumber, String newTerminal,String newGate) {
+
+    for ( Flight flight : airport.getFlights ( ) ) {
+      if (flight.getCompany ( ).equals ( company ) && flight.getFlightNumber ( ) == Integer.parseInt ( flightNumber )) {
+        String[] arr = flight.getGate ( ).split ( "-" );
+        String terminal = arr[0];
+        String gateNumber = arr[1];
+        flight.setGate ( newTerminal + "-" + newGate );
+        if (terminal.equals ( newTerminal )) {
+          switch (terminal) {
+            case "A":
+
+              gatesA[Integer.parseInt ( gateNumber ) - 1].removeFlight ( flight );
+              gatesA[Integer.parseInt ( newGate ) - 1].addFlight ( flight );
+              termA.notifyObservers ();
+              break;
+            case "B":
+
+              gatesB[Integer.parseInt ( gateNumber ) - 1].removeFlight ( flight );
+              gatesB[Integer.parseInt ( newGate ) - 1].addFlight ( flight );
+              termB.notifyObservers ();
+              break;
+            case "C":
+
+              gatesC[Integer.parseInt ( gateNumber ) - 1].removeFlight ( flight );
+              gatesC[Integer.parseInt ( newGate ) - 1].addFlight ( flight );
+              termC.notifyObservers ();
+              break;
+
+          }
+        } else {
+
+          switch (terminal) {
+            case "A":
+              termA.removeFlight ( flight );
+              gatesA[Integer.parseInt ( gateNumber ) - 1].removeFlight ( flight );
+              break;
+            case "B":
+              termB.removeFlight ( flight );
+              gatesB[Integer.parseInt ( gateNumber ) - 1].removeFlight ( flight );
+              break;
+            case "C":
+              termC.removeFlight ( flight );
+              gatesC[Integer.parseInt ( gateNumber ) - 1].removeFlight ( flight );
+              break;
+          }
+          switch (newTerminal) {
+            case "A":
+              termA.addFlight ( flight );
+              gatesA[Integer.parseInt ( newGate ) - 1].addFlight ( flight );
+              break;
+            case "B":
+              termB.addFlight ( flight );
+              gatesB[Integer.parseInt ( newGate ) - 1].addFlight ( flight );
+              break;
+            case "C":
+              termC.addFlight ( flight );
+              gatesC[Integer.parseInt ( newGate ) - 1].addFlight ( flight );
+              break;
+
+
+          }
+        }
+        airport.notifyObservers ();
+
+      }
+    }
+  }
+  public void delayFlight (String company, String flightNumber, String terminal, String gateNumber) {
+    for(Flight flight : airport.getFlights()) {
+      if(flight.getCompany().equals(company) && flight.getFlightNumber() == Integer.parseInt(flightNumber)) {
+        flight.setStatus ( "Delayed" );
+        airport.notifyObservers();
+        switch (terminal) {
+          case "A":
+            termA.notifyObservers ( );
+            gatesA[Integer.parseInt ( gateNumber ) - 1].notifyObservers ( );
+            break;
+          case "B":
+            termB.notifyObservers ( );
+            gatesB[Integer.parseInt ( gateNumber ) - 1].notifyObservers ( );
+            break;
+          case "C":
+            termC.notifyObservers ( );
+            gatesC[Integer.parseInt ( gateNumber ) - 1].notifyObservers ( );
+            break;
+
+        }
+      }
+    }
+  }
+  public void notifyBoarding (String company, String flightNumber, String terminal, String gateNumber) {
+    for(Flight flight : airport.getFlights()) {
+      if(flight.getCompany().equals(company) && flight.getFlightNumber() == Integer.parseInt(flightNumber)) {
+        flight.setStatus ( "Boarding" );
+        airport.notifyObservers();
+        switch (terminal)
+        {
+          case "A":
+            termA.notifyObservers ();
+            gatesA[Integer.parseInt(gateNumber) - 1].notifyObservers ();
+            break;
+          case "B":
+            termB.notifyObservers ();
+            gatesB[Integer.parseInt(gateNumber) - 1].notifyObservers ();
+            break;
+          case "C":
+            termC.notifyObservers ();
+            gatesC[Integer.parseInt(gateNumber) - 1].notifyObservers ();
+            break;
+        }
+
+
+      }
+    }
+  }
+  public void removeFlight(String company, String flightNumber, String terminal, String gateNumber) {
+    for(Flight flight : airport.getFlights()) {
+      if(flight.getCompany().equals(company) && flight.getFlightNumber() == Integer.parseInt(flightNumber)) {
+        switch (terminal) {
+          case "A":
+            gatesA[Integer.parseInt(gateNumber) - 1].removeFlight ( flight );
+            termA.removeFlight ( flight );
+            break;
+          case "B":
+            gatesB[Integer.parseInt(gateNumber) - 1].removeFlight ( flight );
+            termB.removeFlight ( flight );
+            break;
+          case "C":
+            gatesC[Integer.parseInt(gateNumber) - 1].removeFlight ( flight );
+            termC.removeFlight ( flight );
+            break;
+        }
+        airport.removeFlight ( flight );
+      }
+    }
+  }
+
+  public void save (String filename) {
+    try {
+      FileOutputStream fos = new FileOutputStream ( filename );
+      ObjectOutputStream oos = new ObjectOutputStream ( fos );
+      oos.writeObject ( airport.getFlights () );
+      oos.close ( );
+      fos.close ();
+      displayArea.append ( "Saved to " + filename + "\n");
+    } catch (Exception e) {
+      e.printStackTrace ( );
+    }
+  }
 }
+
+
+

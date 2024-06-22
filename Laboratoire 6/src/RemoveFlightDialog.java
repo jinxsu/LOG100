@@ -1,10 +1,9 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
-import java.util.*;
-import java.io.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class CancelFlightDialog extends JDialog {
+public class RemoveFlightDialog extends JDialog {
 
     public static final int WIDTH = 300;
     public static final int HEIGHT = 350;
@@ -13,34 +12,37 @@ public class CancelFlightDialog extends JDialog {
     private JButton okButton, cancelButton;
     private JPanel controlPanel;
     private JTextField companyField, flightNumberField;
-    private JTextField terminalField, gateNumberField;
-    private String[] statuses = { Flight.ONTIME, Flight.CANCELLED, Flight.BOARDING, Flight.DELAYED };
-    public CancelFlightDialog(GuiApp app) {
-        super(app, "Cancel Flight");
+    private JTextField  terminalField, gateNumberField;
+    public RemoveFlightDialog(GuiApp app) {
+        super(app, "Remove Flight");
         this.app = app;
 
         okButton = new JButton("OK");
-        okButton.addActionListener(new ActionListener() {
+        okButton.addActionListener(new ActionListener () {
+
+            @Override
             public void actionPerformed(ActionEvent e) {
-                cancelFlight();
+                removeFlight();
                 setVisible(false);
             }
         });
 
         cancelButton = new JButton("Cancel");
-        cancelButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                int choice = JOptionPane.showConfirmDialog(
-                        CancelFlightDialog.this,
+        cancelButton.addActionListener(new ActionListener () {
+            @Override
+            public void actionPerformed (ActionEvent e) {
+                int choice = JOptionPane.showConfirmDialog (
+                        RemoveFlightDialog.this,
                         "Do you want to cancel?",
                         "Cancel",
-                        JOptionPane.YES_NO_OPTION);
+                        JOptionPane.YES_NO_OPTION );
 
                 if (choice == JOptionPane.YES_OPTION) {
-                    setVisible(false);
+                    setVisible ( false );
                 }
             }
         });
+
         JPanel companyPanel = new JPanel();
         companyField = new JTextField(10);
         companyPanel.add(new JLabel("Company: "));
@@ -63,8 +65,11 @@ public class CancelFlightDialog extends JDialog {
         gatePanel.add(gateNumberField);
 
         controlPanel = new JPanel();
+
+
         controlPanel.add(okButton);
         controlPanel.add(cancelButton);
+
         Container c = getContentPane();
         c.setLayout(new BoxLayout(c,BoxLayout.Y_AXIS));
         c.add(companyPanel);
@@ -77,15 +82,19 @@ public class CancelFlightDialog extends JDialog {
         setSize ( WIDTH, HEIGHT );
         setLocationRelativeTo(app);
 
+
+
     }
 
-    private void cancelFlight ( ) {
+    private void removeFlight ( ) {
+
         String company = companyField.getText();
-        String flightNumber= flightNumberField.getText();
+        String flightNumber = flightNumberField.getText();
         String terminal = terminalField.getText();
         String gateNumber = gateNumberField.getText();
-        app.cancelFlight ( company, flightNumber, terminal, gateNumber );
-        app.appendToDisplayArea ( "Flight " + flightNumber + " has been notified of cancellation" );
+
+        app.removeFlight(company, flightNumber, terminal, gateNumber);
+        app.appendToDisplayArea ( "Removed Flight for " + company + " " + flightNumber + " from " + terminal + " " + gateNumber + "\n" );
     }
 
 }

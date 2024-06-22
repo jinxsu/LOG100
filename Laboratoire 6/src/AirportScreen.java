@@ -20,9 +20,5 @@ public class AirportScreen extends Observer{
     public void update ( ) {
        Observer.displayFlights(airport.getFlights(),screenDialog);
 
-
-
-
-
     }
 }
