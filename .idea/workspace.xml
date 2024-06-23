@@ -4,16 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aab287c2-c7ce-449c-8dfd-88d1cb192480" name="Changes" comment="incomplete 6th lab">
-      <change afterPath="$PROJECT_DIR$/Laboratoire 6/src/NotifyBoardingDialog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Laboratoire 6/src/RemoveFlightDialog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Laboratoire 6/src/SaveDialog.java" afterDir="false" />
+    <list default="true" id="aab287c2-c7ce-449c-8dfd-88d1cb192480" name="Changes" comment="complete 6th lab">
+      <change afterPath="$PROJECT_DIR$/Laboratoire 6/src/LoadDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laboratoire 6/src/AirportScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratoire 6/src/AirportScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laboratoire 6/src/CancelFlightDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratoire 6/src/CancelFlightDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laboratoire 6/src/ChangeGateDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratoire 6/src/ChangeGateDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laboratoire 6/src/DelayFlightDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratoire 6/src/DelayFlightDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratoire 6/src/AddFlightDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratoire 6/src/AddFlightDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratoire 6/src/Flight.java" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratoire 6/src/Flight.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Laboratoire 6/src/GuiApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratoire 6/src/GuiApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratoire 6/src/SaveDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratoire 6/src/SaveDialog.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,12 +36,12 @@
     &quot;assignee&quot;: &quot;jinxsu&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/jinxsu/LOG100.git",
-    "accountId": "7b645db6-c768-4eba-8222-63e5570b90ec"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/jinxsu/LOG100.git&quot;,
+    &quot;accountId&quot;: &quot;7b645db6-c768-4eba-8222-63e5570b90ec&quot;
   }
-}]]></component>
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -82,6 +80,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
+    "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   }
@@ -192,7 +191,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719001436281</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="complete 6th lab">
+      <option name="closed" value="true" />
+      <created>1719019019814</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1719019019814</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,6 +225,7 @@
     <MESSAGE value="complete the fourth lab" />
     <MESSAGE value="incomplete 5th lab" />
     <MESSAGE value="incomplete 6th lab" />
-    <option name="LAST_COMMIT_MESSAGE" value="incomplete 6th lab" />
+    <MESSAGE value="complete 6th lab" />
+    <option name="LAST_COMMIT_MESSAGE" value="complete 6th lab" />
   </component>
 </project>

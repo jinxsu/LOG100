@@ -136,7 +136,7 @@ public class AddFlightDialog extends JDialog {
     app.addFlightToTerminal(flight, terminal);
     app.addFlightToGate(flight, terminal, gateNumber);
     
-    app.appendToDisplayArea("Flight added:\n" + flight);
+    app.appendToDisplayArea("\n Flight added:\n" + flight);
     
   }
 

@@ -1,4 +1,4 @@
-public class Flight {
+public class Flight implements java.io.Serializable {
     /**
      * Constant string for the ON TIME status
      */
